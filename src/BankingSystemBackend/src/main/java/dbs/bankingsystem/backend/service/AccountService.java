@@ -49,6 +49,10 @@ public class AccountService {
         return Constants.ACCOUNT_CREATED;
     }
 
+    public Account getAccountByUsername(String username) {
+        return accountRepository.findAccountByUsername(username);
+    }
+
     /** check if new user by username or email has an existing account, return false if user already exist with an account
      *  for this project, just assume that any user (ie: identified by username or email) is limited to only 1 valid account.
      *  return false if new user already have an existing account which is "ACTIVE"

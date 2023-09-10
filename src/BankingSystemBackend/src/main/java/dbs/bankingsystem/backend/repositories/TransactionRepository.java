@@ -19,6 +19,6 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
 
     List<Transaction> findByTransferTo(String transferTo);
 
-    @Query("SELECT t FROM Transaction t WHERE t.account.accountNo like LOWER(:accountNumber)")
-    Transaction findByAccountNumber(Long accountNumber);
+    @Query("SELECT t FROM Transaction t WHERE t.account.accountNo = :accountNumber")
+    Transaction findByAccountNumber(String accountNumber);
 }

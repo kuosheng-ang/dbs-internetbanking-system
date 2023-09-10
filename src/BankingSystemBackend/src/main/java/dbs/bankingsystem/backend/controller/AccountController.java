@@ -31,7 +31,7 @@ public class AccountController {
     @Autowired
     private TransactionService transactionService;
 
-    private final Logger logger = LogManager.getLogger(getClass());
+    private final Logger logger = LogManager.getLogger(AccountController.class);
 
     @GetMapping("/account")
     public ResponseEntity<Account> getAccountDetails(HttpServletRequest request, HttpServletResponse response) {
