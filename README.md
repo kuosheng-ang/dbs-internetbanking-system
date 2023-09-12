@@ -2,21 +2,36 @@
 
 ## Introduction
 
-This project helps us to understand the basic working of Bank accounts. Some of the functionalities implemented are
-- Account creation
-- Transactions between two accounts
-- Fetching of the transaction history
+@author: ANG KUO SHENG CLEMENT
+
+This project that aim to perform online banking uses spring boot framework in the backend & angular in the front-end . Some of the functionalities implemented are
+- Account Controller
+    - Account creation
+    - Retrieve Acccount Details
+    - Perform Transactions to transfer funds between two accounts
+    - Fetching of account transaction history
+  - User Controller
+      - Use username & password for sign-in/login authentication
+      - IAM policies - role, privileges and permissions tables      
 
 ## Prerequisites
-- java 1.8.x
+- Java JDK 13
+- Oracle 12cR2
 - maven 3.x
 - npm
+
+## ER Diagram
+
+
+- banking system ER diagram
+![banking system ER diagram](/images/banking-systems-ER-diagram.png "banking-system-ER diagram")
 
 ### Steps To Setup Backend
 
 **1. Clone the repository**
 ```bash
-    git clone https://github.com/AbhayKatharotiya/BankingSystem.git
+    https://github.com/kuosheng-ang/dbs-internetbanking-system.git![image](https://github.com/kuosheng-ang/dbs-internetbanking-system/assets/90085499/05a7b52c-73ed-4483-965b-5f003011a087)
+
 ```
 
 **2. Move to root directory of backend**
@@ -70,28 +85,26 @@ The app defines following APIs.
 
 ### Login
 
-![Login image](https://github.com/AbhayKatharotiya/BankingSystem/blob/master/readme-images/login.PNG?raw=true)
+
 
 ### Register
 
-![Register image](https://github.com/AbhayKatharotiya/BankingSystem/blob/master/readme-images/register%20new.PNG?raw=true)
+
 
 ### Home
 
-![Home Page image](https://github.com/AbhayKatharotiya/BankingSystem/blob/master/readme-images/home.PNG?raw=true)
+
 
 ### Profile
 
-![Profile image](https://github.com/AbhayKatharotiya/BankingSystem/blob/master/readme-images/profile.PNG?raw=true)
+
 
 ### Transaction History
 
-![History image](https://github.com/AbhayKatharotiya/BankingSystem/blob/master/readme-images/history.PNG?raw=true)
+
 
 ### Transfer
 
-![Transfer image](https://github.com/AbhayKatharotiya/BankingSystem/blob/master/readme-images/transfer.PNG?raw=true)
 
 
-# Future Extension
-If a further chance is given to take the project ahead, then with the considerable knowledge in Angular and Spring Boot, I would be happy to invest my skills to build a creative and helpful solution for the society.
+
