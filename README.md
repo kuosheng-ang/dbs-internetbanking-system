@@ -4,7 +4,7 @@
 
 @author: ANG KUO SHENG CLEMENT
 
-This project that aim to perform online banking uses spring boot framework in the backend & angular in the front-end . Some of the functionalities implemented are
+This project is a simplified version that aims to allow users to perform online banking activity. It uses spring boot framework (Java) in the backend & angular in the front-end . Some of the functionalities implemented are
 - Account Controller
     - Account creation
     - Retrieve Acccount Details
@@ -18,7 +18,7 @@ This project that aim to perform online banking uses spring boot framework in th
 - Java JDK 13
 - Oracle 12cR2
 - maven 3.x
-- npm
+- npm for Angular 9
 
 ## ER Diagram
 
