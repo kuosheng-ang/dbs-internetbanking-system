@@ -10,9 +10,9 @@ This project that aim to perform online banking uses spring boot framework in th
     - Retrieve Acccount Details
     - Perform Transactions to transfer funds between two accounts
     - Fetching of account transaction history
-  - User Controller
-      - Use username & password for sign-in/login authentication
-      - IAM policies - role, privileges and permissions tables      
+- User Controller
+    - Use username & password for sign-in/login authentication
+    - IAM policies - role, privileges and permissions tables      
 
 ## Prerequisites
 - Java JDK 13
@@ -22,8 +22,9 @@ This project that aim to perform online banking uses spring boot framework in th
 
 ## ER Diagram
 
-
 - banking system ER diagram
+
+
 ![banking system ER diagram](/images/banking-systems-ER-diagram.png "banking-system-ER diagram")
 
 ### Steps To Setup Backend
