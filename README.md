@@ -19,6 +19,7 @@ This project is a simplified version that aims to allow users to perform online 
 - Oracle 12cR2
 - maven 3.x
 - npm for Angular 9
+- node 18
 
 ## ER Diagram
 
