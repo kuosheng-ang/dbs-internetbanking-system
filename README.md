@@ -7,7 +7,7 @@
 This project is a simplified version that aims to allow users to perform online banking activity. It uses spring boot framework (Java) in the backend & angular in the front-end . Some of the functionalities implemented are
 - Account Controller
     - Account creation
-    - Retrieve Acccount Details
+    - Retrieve Account Details
     - Perform Transactions to transfer funds between two accounts
     - Fetching of account transaction history
 - User Controller
