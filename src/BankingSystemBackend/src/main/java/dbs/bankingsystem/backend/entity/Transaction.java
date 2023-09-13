@@ -19,6 +19,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * @author: ANG KUO SHENG CLEMENT
+ * @date: 9-Sep-2023
+ */
 @Entity
 @Table(name = "transactions")
 public class Transaction {

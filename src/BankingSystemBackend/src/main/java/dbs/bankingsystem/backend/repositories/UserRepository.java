@@ -49,8 +49,6 @@ public interface UserRepository extends PagingAndSortingRepository<User, Long>, 
     @Query("SELECT u from User u WHERE u.accountDetails.accountNo = :accountNo")
     User findUserByAccountNum(String accountNo);
 
-
-
     @Query("SELECT u from User u WHERE u.roles IN :roles")
     List<User> findAllUsersByRoles(List<String> roles);
 }

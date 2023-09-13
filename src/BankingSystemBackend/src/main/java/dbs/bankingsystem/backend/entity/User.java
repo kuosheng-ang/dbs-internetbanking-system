@@ -30,7 +30,10 @@ import javax.persistence.Transient;
 
 import org.springframework.security.core.userdetails.UserDetails;
 
-
+/**
+ * @author: ANG KUO SHENG CLEMENT
+ * @date: 9-Sep-2023
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity

@@ -1,6 +1,5 @@
 package dbs.bankingsystem.backend.repositories;
 
-
 import dbs.bankingsystem.backend.entity.Role;
 import dbs.bankingsystem.backend.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
