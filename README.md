@@ -23,7 +23,7 @@ This project is a simplified version that aims to allow users to perform online 
 
 ## ER Diagram
 
-- banking system ER diagram
+- Banking System ER Entity-Relationship Diagram (ERD)
 
 
 ![banking system ER diagram](/images/banking-systems-ER-diagram.png "banking-system-ER diagram")
