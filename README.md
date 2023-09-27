@@ -28,6 +28,45 @@ This project is a simplified version that aims to allow users to perform online 
 
 ![banking system ER diagram](/images/banking-systems-ER-diagram.png "banking-system-ER diagram")
 
+## Unit testing for Controller
+
+
+        @WebMvcTest({HomeController.class, AuthController.class})
+        @Import({SecurityConfig.class, TokenService.class})
+        class HomeControllerTest {
+        
+            @Autowired
+            MockMvc mvc;
+        
+            @Test
+            void rootWhenUnauthenticatedThen401() throws Exception {
+                this.mvc.perform(get("/"))
+                        .andExpect(status().isUnauthorized());
+            }
+        
+            @Test
+            void rootWhenAuthenticatedThenSaysHelloUser() throws Exception {
+                MvcResult result = this.mvc.perform(post("/token")
+                                .with(httpBasic("dvega", "password")))
+                        .andExpect(status().isOk())
+                        .andReturn();
+        
+                String token = result.getResponse().getContentAsString();
+        
+                this.mvc.perform(get("/")
+                                .header("Authorization", "Bearer " + token))
+                        .andExpect(content().string("Hello, dvega"));
+            }
+        
+            @Test
+            @WithMockUser
+            public void rootWithMockUserStatusIsOK() throws Exception {
+                this.mvc.perform(get("/")).andExpect(status().isOk());
+            }
+        
+        
+        }
+
 ### Steps To Setup Backend
 
 **1. Clone the repository**
