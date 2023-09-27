@@ -15,7 +15,7 @@ This project is a simplified version that aims to allow users to perform online 
     - IAM policies - role, privileges and permissions tables
     - Support RESTFul api with JWT token generation
       
-    ![User-creation-with -JWT-Token](/images/User-creation-with -JWT-Token.png "User-creation-with -JWT-Token")
+    ![User-creation-with -JWT-Token](/images/User-creation-with-JWT-Token.PNG "User-creation-with -JWT-Token")
 
 - Authentication Controller
     - Uses Spring Boot Spring Security JWT with settings configured in the WebSecurityConfig including import package from org.springframework.security.oauth2.jwt.* 
