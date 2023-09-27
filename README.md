@@ -28,12 +28,12 @@ This project is a simplified version that aims to allow users to perform online 
 
 ![banking system ER diagram](/images/banking-systems-ER-diagram.png "banking-system-ER diagram")
 
-## Unit testing for Controller
+## Unit testing for UserJWTAuthentication Controller
 
 
         @WebMvcTest({HomeController.class, AuthController.class})
         @Import({SecurityConfig.class, TokenService.class})
-        class HomeControllerTest {
+        class UserJWTAuthenticationControllerTest {
         
             @Autowired
             MockMvc mvc;
@@ -47,7 +47,7 @@ This project is a simplified version that aims to allow users to perform online 
             @Test
             void rootWhenAuthenticatedThenSaysHelloUser() throws Exception {
                 MvcResult result = this.mvc.perform(post("/token")
-                                .with(httpBasic("dvega", "password")))
+                                .with(httpBasic("clementkuoshengang", "password")))
                         .andExpect(status().isOk())
                         .andReturn();
         
@@ -55,7 +55,7 @@ This project is a simplified version that aims to allow users to perform online 
         
                 this.mvc.perform(get("/")
                                 .header("Authorization", "Bearer " + token))
-                        .andExpect(content().string("Hello, dvega"));
+                        .andExpect(content().string("Hello, clementkuoshengang"));
             }
         
             @Test
