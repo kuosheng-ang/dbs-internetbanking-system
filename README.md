@@ -67,6 +67,69 @@ This project is a simplified version that aims to allow users to perform online 
         
         }
 
+## Web Security Config
+
+
+    @Configuration
+    @EnableWebSecurity
+    @EnableMethodSecurity
+    public class SecurityConfig {
+
+        private RSAKey rsaKey;
+    
+        @Bean
+        public AuthenticationManager authManager(UserDetailsService userDetailsService) {
+            var authProvider = new DaoAuthenticationProvider();
+            authProvider.setUserDetailsService(userDetailsService);
+            return new ProviderManager(authProvider);
+        }
+    
+      
+    
+        @Bean
+        public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+            return http
+                    .cors(Customizer.withDefaults())
+                    .csrf(AbstractHttpConfigurer::disable)
+                    .authorizeHttpRequests( auth -> auth
+                            .requestMatchers("/token").permitAll()
+                            .anyRequest().authenticated()
+                    )
+                    .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                    .oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)
+                    .build();
+        }
+    
+        @Bean
+        public JWKSource<SecurityContext> jwkSource() {
+            rsaKey = Jwks.generateRsa();
+            JWKSet jwkSet = new JWKSet(rsaKey);
+            return (jwkSelector, securityContext) -> jwkSelector.select(jwkSet);
+        }
+    
+        @Bean
+        JwtEncoder jwtEncoder(JWKSource<SecurityContext> jwks) {
+            return new NimbusJwtEncoder(jwks);
+        }
+    
+        @Bean
+        JwtDecoder jwtDecoder() throws JOSEException {
+             return NimbusJwtDecoder.withPublicKey(rsaKey.toRSAPublicKey()).build();
+        }
+    
+        @Bean
+        CorsConfigurationSource corsConfigurationSource() {
+            CorsConfiguration configuration = new CorsConfiguration();
+            configuration.setAllowedOrigins(List.of("http://localhost:5030"));
+            configuration.setAllowedMethods(List.of("GET","POST"));
+            configuration.setAllowedHeaders(List.of("Authorization","Content-Type"));
+            UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+            source.registerCorsConfiguration("/**",configuration);
+            return source;
+        }
+
+}
+
 ### Steps To Setup Backend
 
 **1. Clone the repository**
