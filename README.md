@@ -252,8 +252,8 @@ The app defines following APIs.
                   <artifactId>frontend-maven-plugin</artifactId>
                   <version>1.13.4</version>
                   <configuration>
-                     <nodeVersion>v18.17.1</nodeVersion>
-                     <npmVersion>10.1.0</npmVersion>
+                     <nodeVersion>v18.10.1</nodeVersion>
+                     <npmVersion>8.19.2</npmVersion>
                      <workingDirectory>src/main/resources</workingDirectory>
                   </configuration>
                   <executions>
