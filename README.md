@@ -231,17 +231,17 @@ The app defines following APIs.
 
 -  The front-end Angular implementation for the client which will access Spring Boot REST API.
 -  Angular CLI is used to generate and manage our front-end modules. Firstly, requires installation of node and npm, as Angular CLI is an npm tool.
-   Then we need to use the frontend-maven-plugin to build our Angular project using Maven
+   Then we need to use the frontend-maven-plugin to build our Angular project using Maven. Maintain in the POM.xml as follows:
          
        <build>
             <plugins>
              <plugin>
                   <groupId>com.github.eirslett</groupId>
                   <artifactId>frontend-maven-plugin</artifactId>
-                  <version>1.3</version>
+                  <version>1.13.4</version>
                   <configuration>
-                     <nodeVersion>v6.10.2</nodeVersion>
-                     <npmVersion>3.10.10</npmVersion>
+                     <nodeVersion>v18.17.1</nodeVersion>
+                     <npmVersion>10.1.0</npmVersion>
                      <workingDirectory>src/main/resources</workingDirectory>
                   </configuration>
                   <executions>
