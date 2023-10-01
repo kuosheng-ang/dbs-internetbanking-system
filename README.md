@@ -233,8 +233,8 @@ The app defines following APIs.
 -  Angular CLI is used to generate and manage our front-end modules. Firstly, requires installation of node and npm, as Angular CLI is an npm tool.
   Then we need to use the frontend-maven-plugin to build our Angular project using Maven
 
-    -    <build>
-          <plugins>
+  -    <build>
+  -         <plugins>
               <plugin>
                     <groupId>com.github.eirslett</groupId>
                     <artifactId>frontend-maven-plugin</artifactId>
@@ -268,8 +268,8 @@ The app defines following APIs.
                           </execution>
                     </executions>
               </plugin>
-          </plugins>
-    </build>
+         </plugins>
+     </build>
 
 **2. Install Package**
 ```bash 
