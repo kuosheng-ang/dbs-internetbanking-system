@@ -229,10 +229,11 @@ The app defines following APIs.
 ### Steps To Setup Frontend -  Angular implementation for the client
 
 
-    -  The front-end Angular implementation for the client which will access Spring Boot REST API.
-    -  Angular CLI is used to generate and manage our front-end modules. Firstly, requires installation of node and npm, as Angular CLI is an npm tool.
-       Then we need to use the frontend-maven-plugin to build our Angular project using Maven
-    <build>
+-  The front-end Angular implementation for the client which will access Spring Boot REST API.
+-  Angular CLI is used to generate and manage our front-end modules. Firstly, requires installation of node and npm, as Angular CLI is an npm tool.
+  Then we need to use the frontend-maven-plugin to build our Angular project using Maven
+
+    -    <build>
           <plugins>
               <plugin>
                     <groupId>com.github.eirslett</groupId>
