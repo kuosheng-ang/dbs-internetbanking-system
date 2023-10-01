@@ -231,45 +231,46 @@ The app defines following APIs.
 
 -  The front-end Angular implementation for the client which will access Spring Boot REST API.
 -  Angular CLI is used to generate and manage our front-end modules. Firstly, requires installation of node and npm, as Angular CLI is an npm tool.
-  Then we need to use the frontend-maven-plugin to build our Angular project using Maven
+   Then we need to use the frontend-maven-plugin to build our Angular project using Maven
+         
+    -      <build>
+            <plugins>
+             <plugin>
+                  <groupId>com.github.eirslett</groupId>
+                  <artifactId>frontend-maven-plugin</artifactId>
+                  <version>1.3</version>
+                  <configuration>
+                     <nodeVersion>v6.10.2</nodeVersion>
+                     <npmVersion>3.10.10</npmVersion>
+                     <workingDirectory>src/main/resources</workingDirectory>
+                  </configuration>
+                  <executions>
+                        <execution>
+                             <id>install node and npm</id>
+                             <goals>
+                                 <goal>install-node-and-npm</goal>
+                             </goals>
+                        </execution>
+                        <execution>
+                            <id>npm install</id>
+                            <goals>
+                               <goal>npm</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>npm run build</id>
+                            <goals>
+                               <goal>npm</goal>
+                            </goals>
+                            <configuration>
+                               <arguments>run build</arguments>
+                            </configuration>
+                        </execution>
+                  </executions>
+            </plugin>
+            </plugins>
+          </build>
 
-  -    <build>
-  -         <plugins>
-              <plugin>
-                    <groupId>com.github.eirslett</groupId>
-                    <artifactId>frontend-maven-plugin</artifactId>
-                    <version>1.3</version>
-                    <configuration>
-                       <nodeVersion>v6.10.2</nodeVersion>
-                       <npmVersion>3.10.10</npmVersion>
-                       <workingDirectory>src/main/resources</workingDirectory>
-                    </configuration>
-                    <executions>
-                          <execution>
-                               <id>install node and npm</id>
-                               <goals>
-                                   <goal>install-node-and-npm</goal>
-                               </goals>
-                          </execution>
-                          <execution>
-                              <id>npm install</id>
-                              <goals>
-                                 <goal>npm</goal>
-                              </goals>
-                          </execution>
-                          <execution>
-                              <id>npm run build</id>
-                              <goals>
-                                 <goal>npm</goal>
-                              </goals>
-                              <configuration>
-                                 <arguments>run build</arguments>
-                              </configuration>
-                          </execution>
-                    </executions>
-              </plugin>
-         </plugins>
-     </build>
 
 **2. Install Package**
 ```bash 
