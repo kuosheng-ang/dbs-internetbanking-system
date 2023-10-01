@@ -75,7 +75,7 @@ This project is a simplified version that aims to allow users to perform online 
    
 ## Prerequisites
 - Java JDK 13
-- Oracle 12cR2
+- Oracle 12cR2 / PostgreSQL v14
 - maven 3.x
 - npm 10.1.0 for Angular 16.2.4
 - node 18.17.1
