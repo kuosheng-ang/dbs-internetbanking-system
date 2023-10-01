@@ -5,12 +5,13 @@
 @author: ANG KUO SHENG CLEMENT
 
 This project is a simplified version that aims to allow users to perform online banking activity. It uses spring boot framework (Java) in the backend & angular in the front-end . Some of the functionalities implemented are
-- Account Entities with certain sequence (ie: sequence with initial value) 
-       -    @Id
-            @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequence")  // SequenceStyleGenerator doesnt work well in Oracle DB
-            @SequenceGenerator(name = "accountSequence", sequenceName = "account_seq",  initialValue = 7600501, allocationSize = 1)             
-            private Long id;
 
+- Account Entities with certain sequence (ie: sequence with initial value)
+
+        -    @Id
+             @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequence")  // SequenceStyleGenerator doesnt work well in Oracle DB
+             @SequenceGenerator(name = "accountSequence", sequenceName = "account_seq",  initialValue = 7600501, allocationSize = 1)             
+             private Long id;
   
 - Account Controller
     - Account creation
