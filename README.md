@@ -53,6 +53,27 @@ This project is a simplified version that aims to allow users to perform online 
                 <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
              </dependency>    
 
+ - The use of @CrossOrigin at the controller-level config is to allow CORS from our Angular App running at the specified URL (ie: "http://localhost:8087" )
+
+         -   @Slf4j
+             @RestController
+             @RequestMapping("/api/accounts")
+             @CrossOrigin(origins = "http://localhost:8087")
+             @Api(tags = { "Accounts and Transactions REST endpoints" })
+             public class AccountController {
+
+                    @Autowired
+                    private AccountService accountService;
+
+        -   @Slf4j
+            @RestController
+            @RequestMapping(value="/api/user")
+            @CrossOrigin(origins = "http://localhost:8087")
+            public class UserController {
+
+                    @Autowired
+                    private UserService userService;
+   
 ## Prerequisites
 - Java JDK 13
 - Oracle 12cR2
