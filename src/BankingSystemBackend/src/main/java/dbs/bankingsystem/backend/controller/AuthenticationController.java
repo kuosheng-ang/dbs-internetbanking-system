@@ -32,7 +32,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:8087")
 @RequestMapping("/api")
 public class AuthenticationController {
 
