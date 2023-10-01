@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
-@CrossOrigin
-@RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:8087")
+@RequestMapping("/api/user")
 public class UserController {
 
     @Autowired
@@ -25,7 +25,7 @@ public class UserController {
 
     private final Logger logger = LogManager.getLogger(getClass());
 
-    @PostMapping("/user")
+    @PostMapping("/register")
     public ResponseEntity<Response> createUser(@RequestBody User user, @RequestParam("accountType") String accountType) {
         try {
             return ResponseEntity.ok(new Response(Constants.SUCCESS, userService.createUser(user, accountType)));
