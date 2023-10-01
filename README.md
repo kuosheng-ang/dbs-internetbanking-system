@@ -8,10 +8,10 @@ This project is a simplified version that aims to allow users to perform online 
 
 - Account Entities with certain sequence (ie: sequence with initial value)
 
-             @Id
-             @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequence")  // SequenceStyleGenerator doesnt work well in Oracle DB
-             @SequenceGenerator(name = "accountSequence", sequenceName = "account_seq",  initialValue = 7600501, allocationSize = 1)             
-             private Long id;
+      @Id
+      @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequence")  
+      @SequenceGenerator(name = "accountSequence", sequenceName = "account_seq",  initialValue = 7600501, allocationSize = 1)             
+      private Long id;
   
 - Account Controller
     - Account creation
