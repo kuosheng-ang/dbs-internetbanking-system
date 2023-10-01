@@ -10,7 +10,8 @@ This project is a simplified version that aims to allow users to perform online 
 
       @Id
       @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "accountSequence")  
-      @SequenceGenerator(name = "accountSequence", sequenceName = "account_seq",  initialValue = 7600501, allocationSize = 1)             
+      @SequenceGenerator(name = "accountSequence", sequenceName = "account_seq",
+               initialValue = 7600501, allocationSize = 1)             
       private Long id;
   
 - Account Controller
