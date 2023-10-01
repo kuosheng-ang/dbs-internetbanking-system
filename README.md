@@ -283,6 +283,8 @@ The app defines following APIs.
             </plugins>
           </build>
 
+![angular-cli-setup-installation](/images/angular-cli-setup.PNG "angular-cli-setup-installation")
+
 
 **2. Install Package**
 ```bash 
