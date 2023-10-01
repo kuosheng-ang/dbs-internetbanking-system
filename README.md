@@ -59,7 +59,6 @@ This project is a simplified version that aims to allow users to perform online 
              @RestController
              @RequestMapping("/api/accounts")
              @CrossOrigin(origins = "http://localhost:8087")
-             @Api(tags = { "Accounts and Transactions REST endpoints" })
              public class AccountController {
 
                     @Autowired
