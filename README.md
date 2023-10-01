@@ -13,6 +13,9 @@ This project is a simplified version that aims to allow users to perform online 
       @SequenceGenerator(name = "accountSequence", sequenceName = "account_seq",
                initialValue = 7600501, allocationSize = 1)             
       private Long id;
+
+  ![account-entity-table with sequence generator](/images/account-entity-table.PNG "account-entity-tabl")
+
   
 - Account Controller
     - Account creation
