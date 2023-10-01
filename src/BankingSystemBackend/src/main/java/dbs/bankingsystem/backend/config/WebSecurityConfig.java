@@ -85,7 +85,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {*/
 
             http
-                .csrf().disable().authorizeRequests()
+                .cors().and().csrf().disable().authorizeRequests()
                 //.authorizeHttpRequests(auth -> auth.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers("/api/login").permitAll()
                 .antMatchers( "/api/user").permitAll()
