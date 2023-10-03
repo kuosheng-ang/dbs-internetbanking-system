@@ -6,7 +6,7 @@
 ### Steps to setup
 **1. Clone the repository**
 ```bash
-    git clone https://github.com/AbhayKatharotiya/BankingSystemFrontend.git
+    
 ``` 
 
 **2. Install Package**
@@ -21,7 +21,7 @@
 
 **4. Open url**
 ```bash
-    http://localhost:4200/
+    http://localhost:8087/
 ```
 
 ### Description
@@ -32,5 +32,5 @@ This project is demo project for angular beginners to implement the angular with
 
 - Checkout for the spring boot backend repository.
 ```link
-    https://github.com/AbhayKatharotiya/BankingSystemBackend.git
+    
 ```
