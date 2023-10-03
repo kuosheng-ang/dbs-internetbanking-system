@@ -10,26 +10,26 @@
                             <p>Enter Your Login Details</p>
                         </div>
                         <form [formGroup]="loginForm" (ngSubmit)="login()">
-                            <label>Contact No.</label>
+                            <label>Email.</label>
                             <div class="input-group form-group-no-border">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
                                       <i class="fa fa-phone"></i>
                                   </span>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Contact No." id="contactNo"
-                                       formControlName="contactNo">
+                                <input type="text" class="form-control" placeholder="Email" id="Email"
+                                       formControlName="Email">
                             </div>
 
-                            <label>PIN</label>
+                            <label>Password</label>
                             <div class="input-group form-group-no-border">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
                                       <i class="nc-icon nc-key-25"></i>
                                   </span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="PIN" id="pin"
-                                       formControlName="pin">
+                                <input type="password" class="form-control" placeholder="Password" id="password"
+                                       formControlName="password">
                             </div>
                             <button class="btn btn-danger btn-block btn-round" type="submit" [disabled]="!loginForm.valid">Login</button>
                         </form>
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="footer register-footer text-center">
-                <h6> made with <i class="fa fa-heart heart"></i> by Abhay Katharotiya</h6>
+                <h6> made with <i class="fa fa-heart heart"></i> by ANG KUO SHENG CLEMENT</h6>
             </div>
         </div>
     </div>
