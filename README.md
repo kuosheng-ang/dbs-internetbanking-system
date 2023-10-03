@@ -302,6 +302,7 @@ The app defines following APIs.
 
 ### Login
 
+![banking online-login-page](/images/login-page.PNG "login-page")
 
 
 ### Register
