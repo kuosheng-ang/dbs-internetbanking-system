@@ -300,13 +300,14 @@ The app defines following APIs.
 
 # Application Screenshots
 
-### Login
+### Login Page
 
 ![banking online-login-page](/images/login-page.PNG "login-page")
 
 
-### Register
+### User Registration Page
 
+![user registration](/images/register-page.PNG "user-registration page")
 
 
 ### Home
