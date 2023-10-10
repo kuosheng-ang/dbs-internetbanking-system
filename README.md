@@ -19,7 +19,20 @@ This project is a simplified version that aims to allow users to perform online 
   
 - Account Controller
     - Account creation
-    - Retrieve Account Details
+    - Retrieve Account Details via RESTFUL API endpoints
+
+  - api_get all accounts listed :
+  
+![api_get all accounts listing](/images/api_account_query_getallaccounts_listing.PNG "api_get all accounts listing")
+
+  - api_get accounts query by status parameters (ie: ACTIVE):
+
+![api_get_account_by_status_parameter_active](/images/api_account_query_parameter_status_active.PNG "api_get_account_by_status_parameter_active")
+
+   - api_get accounts query by status parameters (ie: DORMANT):
+
+![api_get_account_by_status_parameter_dormant](/images/api_account_query_parameter_status_dormant.PNG "api_get_account_by_status_parameter_dormant")
+  
     - Perform Transactions to transfer funds between two accounts
     - Fetching of account transaction history
 - User Controller
