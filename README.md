@@ -78,7 +78,7 @@ This project is a simplified version that aims to allow users to perform online 
                 <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
              </dependency>    
 
- - The use of @CrossOrigin at the controller-level config is to allow CORS from our Angular App running at the specified URL (ie: "http://localhost:8087" )
+ - The use of @CrossOrigin at the controller-level config is to allow CORS from our Angular App running at the specified URL (ie: "http://localhost:8087" ) & configuration parameters maintained in the securityConfig class file
 
          -   @Slf4j
              @RestController
@@ -97,6 +97,11 @@ This project is a simplified version that aims to allow users to perform online 
 
                     @Autowired
                     private UserService userService;
+
+      -   SecurityConfig file:
+        
+               http
+                .cors().and().csrf().disable().authorizeHttpRequests()
    
 ## Prerequisites
 - Java JDK 13
