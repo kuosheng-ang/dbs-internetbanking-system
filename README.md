@@ -107,7 +107,7 @@ This project is a simplified version that aims to allow users to perform online 
 - Java JDK 13
 - Oracle 12cR2 / PostgreSQL v14
 - maven 3.x
-- npm 8.19.2 for Angular 16.2.4
+- npm 8.19.2 for Angular 16.2.2
 - node 18.10.0
 
 ## ER Diagram
