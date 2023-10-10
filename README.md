@@ -80,23 +80,23 @@ This project is a simplified version that aims to allow users to perform online 
 
  - The use of @CrossOrigin at the controller-level config is to allow CORS from our Angular App running at the specified URL (ie: "http://localhost:8087" ) & configuration parameters maintained in the securityConfig class file
 
-         -   @Slf4j
-             @RestController
-             @RequestMapping("/api/accounts")
-             @CrossOrigin(origins = "http://localhost:8087")
-             public class AccountController {
+                   @Slf4j
+                   @RestController
+                   @RequestMapping("/api/accounts")
+                   @CrossOrigin(origins = "http://localhost:8087")
+                   public class AccountController {
 
-                    @Autowired
-                    private AccountService accountService;
+                          @Autowired
+                          private AccountService accountService;
 
-        -   @Slf4j
-            @RestController
-            @RequestMapping(value="/api/user")
-            @CrossOrigin(origins = "http://localhost:8087")
-            public class UserController {
-
-                    @Autowired
-                    private UserService userService;
+                  @Slf4j
+                  @RestController
+                  @RequestMapping(value="/api/user")
+                  @CrossOrigin(origins = "http://localhost:8087")
+                  public class UserController {
+      
+                          @Autowired
+                          private UserService userService;
 
       -   SecurityConfig file:
         
